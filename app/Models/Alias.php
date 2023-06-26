@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Alias extends Model
 {
     use HasFactory;
+
+    public function people()
+    {
+        return $this->belongsTo(Person::class);
+    }
 }
