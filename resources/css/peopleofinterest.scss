@@ -38,3 +38,68 @@ button{
         background-color: $content_background_color;
     }
 }
+
+.setContent__div{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .setContent__button_ele {
+        width: 200px;
+    }
+    .setContent__button_message{
+        color: white;
+        font-size: 15px;
+    }
+}
+
+.missions_div{
+
+    .missions_title{
+        color: white;
+        text-align: center;  
+        text-decoration: underline;
+    }
+
+    .missions_list{
+        color: white;
+        list-style: none;
+        text-align: center;
+        .missions_list_loading{
+            font-size: 30px;
+        }
+        .mission_list_item{
+            .mission_list_item_result{
+                text-decoration: underline;
+            }
+        }
+        .mission_list_divider{
+            color: white;   
+        }
+    }
+}
+
+.missionedit_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .missionedit_title{
+        color: white;
+        text-align: center;  
+        text-decoration: underline;
+    }
+
+    .missionedit_inputdiv{
+        .missionedit_inputdiv_input{
+         background-color: #532b55;
+         color: white;
+        }
+        .missionedit_inputdiv_savebutton{
+            background-color: #532b55;    
+        }
+    }
+    .missionedit_backbutton{
+        width: 200px;
+    }
+}
