@@ -32,7 +32,9 @@ export default function MissionEditForm({ missionId, setMissionId }) {
     const submitMissionEdit = async (e) => {
         e.preventDefault()
 
-        console.log('Submit Clicked');
+        const response = await axios.post('/api/missions/store', mission)
+
+        console.log(response.data);
     }
 
     return (
