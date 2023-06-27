@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Noto+Serif+Display:wght@200;400;700&display=swap');
+
+$content_background_color: #532b55;
+$navigation_background_color: #311a32;
+$publicimagesurlprefix: '../../public/images';
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    background-color: $content_background_color;
+    background-image: url($publicimagesurlprefix + '/mi6logos/mi6-seal-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    flex-grow: 1;
+
+    .title_text {
+        color: white;
+        font-size: 60px;
+    }
+
+}
+

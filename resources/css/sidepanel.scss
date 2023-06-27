@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Noto+Serif+Display:wght@200;400;700&display=swap');
+
+$content_background_color: #532b55;
+$navigation_background_color: #311a32;
+$publicimagesurlprefix: '../../public/images';
+
+.navigation {
+    background-color: $navigation_background_color;
+
+    transition: all 0.5s linear;
+    width: 300px;
+
+    &.closed {
+        width: 0px;
+    }
+
+    .seal {
+        background-image: url($publicimagesurlprefix + '/mi6logos/mi6-seal.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin: 20px 0;
+        height: 150px;
+        width: 100%;
+
+        .controller {
+            align-items: center;
+            background-color: $navigation_background_color;
+            display: flex;
+            height: 2rem;
+            justify-content: center;
+            left: 100%;
+            position: relative;
+            top: 10px;
+            width: 1.5rem;
+
+            p {
+                color: white;
+                margin: 0;
+            }
+        }
+    }
+
+    a {
+
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 30px;
+        padding-left: 10px;
+    }
+
+    nav.links_div {
+        height: 50px;
+        margin: 0;
+        width: 100%;
+
+        div {
+            overflow: hidden;
+
+            a.selected {
+                background-color: $content_background_color;
+            }
+        }
+    }
+}
