@@ -24,3 +24,17 @@ $publicimagesurlprefix: '../../public/images';
     }
 
 }
+
+button{
+    background-color: $navigation_background_color;
+    color: white;
+}
+
+.status-filter__status{
+    background-color: $navigation_background_color;
+    color: white;
+
+    &_selected{
+        background-color: $content_background_color;
+    }
+}

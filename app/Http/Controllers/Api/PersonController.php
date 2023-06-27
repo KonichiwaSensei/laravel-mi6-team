@@ -9,9 +9,15 @@ use Illuminate\Http\Request;
 
 class PersonController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $people = Person::orderBy('id')->get();
+        $status = $request->input('status');
+
+        if ($status !== '' ) {
+            $people = Person::orderBy('id')->where('status_id', $status)->get();
+        }else{
+            $people = Person::orderBy('id')->get();
+        }
 
         return $people;
     }
