@@ -38,14 +38,14 @@ export default function Missions() {
                                 ? <div className="missions_list_loading">Loading...</div>
                                 :
                                 missions.map((mission) => {
-                                    return <>
+                                    return <div key={mission.id} className="mission_list_divwrap">
                                         <li key={mission.id} className="mission_list_item" onClick={() => setMissionId(mission.id)}>
                                             Mission Name = <strong className="mission_list_item_result">{mission.name}</strong>
                                             <br />
                                             Missionn Year = <strong className="mission_list_item_result">{mission.year}</strong>
                                         </li>
                                         <hr className="mission_list_divider" />
-                                    </>
+                                    </div>
                                 })
                         }
                     </ul>

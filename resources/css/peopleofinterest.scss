@@ -26,81 +26,101 @@ $publicimagesurlprefix: '../../public/images';
 
 }
 
-button{
+button {
     background-color: $navigation_background_color;
     color: $text_color;
 }
 
-.status-filter__status{
+.status-filter__status {
     background-color: $navigation_background_color;
     color: $text_color;
 
-    &_selected{
+    &_selected {
         background-color: $content_background_color;
     }
 }
 
-.setContent__div{ 
+.setContent__div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     .setContent__button_ele {
         width: 200px;
     }
-    .setContent__button_message{
+
+    .setContent__button_message {
         color: $text_color;
         font-size: 15px;
     }
 }
 
-.missions_div{
+.missions_div {
 
-    .missions_title{
+    .missions_title {
         color: $text_color;
-        text-align: center;  
+        text-align: center;
         text-decoration: underline;
     }
 
-    .missions_list{
+    .missions_list {
         color: $text_color;
         list-style: none;
         text-align: center;
-        .missions_list_loading{
+
+        .missions_list_loading {
             font-size: 30px;
         }
-        .mission_list_item{
-            .mission_list_item_result{
-                text-decoration: underline;
+
+        .mission_list_divwrap {
+            .mission_list_item {
+                .mission_list_item_result {
+                    text-decoration: underline;
+                }
+            }
+
+            .mission_list_divider {
+                color: $text_color;
             }
         }
-        .mission_list_divider{
-            color: $text_color;   
-        }
+
     }
 }
 
-.missionedit_div{
+.missionedit_div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .missionedit_title{
+
+    .missionedit_title {
         color: $text_color;
-        text-align: center;  
+        text-align: center;
         text-decoration: underline;
     }
 
-    .missionedit_inputdiv{
-        .missionedit_inputdiv_input{
-         background-color: $content_background_color;
-         color: $text_color;
+    .missionedit_inputdiv {
+
+        .missionedit_inputdiv_form {
+
+            .missionedit_form_input {
+                background-color: $content_background_color;
+                color: $text_color;
+            }
+
+            .missionedit_form_savebutton {
+                background-color: $content_background_color;
+            }
         }
-        .missionedit_inputdiv_savebutton{
-            background-color: $content_background_color;    
+
+        .missionedit_loading {
+            color: $text_color;
+            font-size: 30px;
         }
     }
-    .missionedit_backbutton{
+
+    .missionedit_backbutton {
         width: 200px;
     }
 }
