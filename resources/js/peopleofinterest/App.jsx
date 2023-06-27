@@ -1,4 +1,5 @@
-import  People  from './components/People';
+import People from "./components/People";
+
 
 export function App () {
 
