@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Noto+Serif+Display:wght@200;400;700&display=swap');
+
+$content_background_color: #532b55;
+$navigation_background_color: #311a32;
+$publicimagesurlprefix: '../../public/images';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: flex-start;
+    font-family: Cutive Mono;
+    margin: 0;
+}
