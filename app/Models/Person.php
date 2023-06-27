@@ -15,12 +15,12 @@ class Person extends Model
         return $this->hasMany(Alias::class);
     }
 
-    public function images()
+    public function image()
     {
         return $this->belongsTo(Image::class);
     }
 
-   public function statuses()
+   public function status()
     {
         return $this->belongsTo(Status::class);
     }
