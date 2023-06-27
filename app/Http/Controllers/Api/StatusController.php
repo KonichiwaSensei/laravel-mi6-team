@@ -8,12 +8,10 @@ use Illuminate\Http\Request;
 
 class StatusController extends Controller
 {
-    
+    public function index()
+    {
+        $statuses = Status::orderBy('id')->get();
 
-    public function index(){
-
-        $status = Status::orderBy('id')->get();
-
-        return $status;
+        return $statuses;
     }
 }

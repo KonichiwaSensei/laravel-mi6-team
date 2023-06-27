@@ -2,6 +2,7 @@
 
 $content_background_color: #532b55;
 $navigation_background_color: #311a32;
+$text_color: white;
 $publicimagesurlprefix: '../../public/images';
 
 .content {
@@ -19,8 +20,107 @@ $publicimagesurlprefix: '../../public/images';
     flex-grow: 1;
 
     .title_text {
-        color: white;
+        color: $text_color;
         font-size: 60px;
     }
 
+}
+
+button {
+    background-color: $navigation_background_color;
+    color: $text_color;
+}
+
+.status-filter__status {
+    background-color: $navigation_background_color;
+    color: $text_color;
+
+    &_selected {
+        background-color: $content_background_color;
+    }
+}
+
+.setContent__div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .setContent__button_ele {
+        width: 200px;
+    }
+
+    .setContent__button_message {
+        color: $text_color;
+        font-size: 15px;
+    }
+}
+
+.missions_div {
+
+    .missions_title {
+        color: $text_color;
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    .missions_list {
+        color: $text_color;
+        list-style: none;
+        text-align: center;
+
+        .missions_list_loading {
+            font-size: 30px;
+        }
+
+        .mission_list_divwrap {
+            .mission_list_item {
+                .mission_list_item_result {
+                    text-decoration: underline;
+                }
+            }
+
+            .mission_list_divider {
+                color: $text_color;
+            }
+        }
+
+    }
+}
+
+.missionedit_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .missionedit_title {
+        color: $text_color;
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    .missionedit_inputdiv {
+
+        .missionedit_inputdiv_form {
+
+            .missionedit_form_input {
+                background-color: $content_background_color;
+                color: $text_color;
+            }
+
+            .missionedit_form_savebutton {
+                background-color: $content_background_color;
+            }
+        }
+
+        .missionedit_loading {
+            color: $text_color;
+            font-size: 30px;
+        }
+    }
+
+    .missionedit_backbutton {
+        width: 200px;
+    }
 }

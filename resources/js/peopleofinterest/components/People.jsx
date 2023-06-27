@@ -7,20 +7,20 @@ export default function People() {
     const [personId, setPersonId] = useState(null)
     const [SelectedStatus,setSelectedStatus] = useState('')
 
-
     const getData = async () => {
-        const response = await fetch('/api/people' + '?status=' + encodeURIComponent(SelectedStatus))
+        const response = await fetch('/api/people' + '?status=' + encodeURIComponent(selectedStatus))
         const data = await response.json()
+        // console.log(response);
         setPeople(data)
     }
 
     useEffect(() => {
         getData()
-    },[SelectedStatus])
+    },[selectedStatus])
 
     return (
         <div>
-            <StatusFilter SelectedStatus={SelectedStatus} setSelectedStatus={setSelectedStatus} />
+            <StatusFilter selectedStatus={selectedStatus} setSelectedStatus={setSelectedStatus}/>
             {personId
             ?
             <PersonDetail personId={personId} setPersonId={setPersonId} />
@@ -35,6 +35,7 @@ export default function People() {
                     </p>
                 )
             })}
+            
         </div>
     )
 

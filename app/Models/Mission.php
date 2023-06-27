@@ -9,8 +9,8 @@ class Mission extends Model
 {
     use HasFactory;
 
-
-    public function person(){
-        return $this->belongsToMany(Mission::class);
+    public function people()
+    {
+        return $this->belongsToMany(Person::class);
     }
 }

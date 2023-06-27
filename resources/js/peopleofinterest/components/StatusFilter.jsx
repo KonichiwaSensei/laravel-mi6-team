@@ -1,42 +1,39 @@
-import axios from "axios";
 import { useEffect, useState } from "react"
+import axios from "axios"
 
-
-export default function StatusFilter({SelectedStatus,setSelectedStatus}){
-    const [statuses, setstatuses] = useState([]);
+export default function StatusFilter({ selectedStatus, setSelectedStatus }) {
+    const [statuses, setStatuses] = useState([])
 
     const loadStatuses = async () => {
-        //request with axios
-       try{
-        const response = await axios.get('/api/statuses')
-        console.log(response)
-        setstatuses(response.data)
-       }
-       catch(err){
-        console.log(err)
-       }
+        // Request with Axios:
+        try {
+            const response = await axios.get('/api/statuses')
+            // console.log(response);
+            setStatuses(response.data)
+        } catch (error) {
+            console.log(error);
+        }
 
-        //request with fetch
+
         // const response = await fetch('/api/statuses')
         // const data = await response.json()
-        // loadStatuses(data);
-
-
+        // setStatuses(data)
     }
 
     useEffect(() => {
-        loadStatuses();
-    },[])
-    return(
+        loadStatuses()
+    }, [])
+
+    // console.log(selectedStatus);
+    return (
         <>
-        {
-            statuses.map((status) => {
-            return  <button key={status.id} className={`status-filter__status` + (status.id === SelectedStatus ? '_selected' : '')} onClick={ () => setSelectedStatus(status.id) }>
-                    {status.name}
-                </button>
-            })
-        }
-    </>
+            {
+                statuses.map((status) => {
+                    return <button key={status.id} className={`status-filter__status` + (status.id === selectedStatus ? '_selected' : '')} onClick={() => setSelectedStatus(status.id)}>
+                        {status.name}
+                    </button>
+                })
+            }
+        </>
     )
-    
 }
