@@ -8,7 +8,7 @@ export default function StatusFilter({ selectedStatus, setSelectedStatus }) {
         // Request with Axios:
         try {
             const response = await axios.get('/api/statuses')
-            console.log(response);
+            // console.log(response);
             setStatuses(response.data)
         } catch (error) {
             console.log(error);
@@ -24,7 +24,7 @@ export default function StatusFilter({ selectedStatus, setSelectedStatus }) {
         loadStatuses()
     }, [])
 
-    console.log(selectedStatus);
+    // console.log(selectedStatus);
     return (
         <>
             {

@@ -12,7 +12,7 @@ export default function People() {
     const getData = async () => {
         const response = await fetch('/api/people' + '?status=' + encodeURIComponent(selectedStatus))
         const data = await response.json()
-        console.log(response);
+        // console.log(response);
         setPeople(data)
     }
 
