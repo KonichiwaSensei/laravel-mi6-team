@@ -5,7 +5,7 @@ import StatusFilter from './StatusFilter';
 export default function People() {
     const [people, setPeople] = useState(null)
     const [personId, setPersonId] = useState(null)
-    const [SelectedStatus,setSelectedStatus] = useState('')
+    const [selectedStatus,setSelectedStatus] = useState('')
 
     const getData = async () => {
         const response = await fetch('/api/people' + '?status=' + encodeURIComponent(selectedStatus))
