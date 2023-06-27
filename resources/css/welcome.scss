@@ -2,6 +2,7 @@
 
 $content_background_color: #532b55;
 $navigation_background_color: #311a32;
+$text_color: white;
 $publicimagesurlprefix: '../../public/images';
 
 .content {
@@ -19,7 +20,7 @@ $publicimagesurlprefix: '../../public/images';
     flex-grow: 1;
 
     .title_text {
-        color: white;
+        color: $text_color;
         font-size: 60px;
     }
 

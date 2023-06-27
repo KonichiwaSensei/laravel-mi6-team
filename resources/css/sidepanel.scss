@@ -2,6 +2,7 @@
 
 $content_background_color: #532b55;
 $navigation_background_color: #311a32;
+$text_color: white;
 $publicimagesurlprefix: '../../public/images';
 
 .navigation {
@@ -35,7 +36,7 @@ $publicimagesurlprefix: '../../public/images';
             width: 1.5rem;
 
             p {
-                color: white;
+                color: $text_color;
                 margin: 0;
             }
         }
@@ -43,7 +44,7 @@ $publicimagesurlprefix: '../../public/images';
 
     a {
 
-        color: white;
+        color: $text_color;
         font-size: 20px;
         text-align: center;
         margin-top: 30px;
